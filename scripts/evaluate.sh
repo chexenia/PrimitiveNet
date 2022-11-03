@@ -1,10 +1,10 @@
 cd src
-mkdir results
-mkdir results/statistics
-mkdir results/visualize
-mkdir results/predictions
-mkdir results/relation-iou
-mkdir results/relation
+mkdir -p results
+mkdir -p results/statistics
+mkdir -p results/visualize
+mkdir -p results/predictions
+mkdir -p results/relation-iou
+mkdir -p results/relation
 
 rm results/predictions/*
 rm results/relation/*

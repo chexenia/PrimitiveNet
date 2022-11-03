@@ -136,7 +136,7 @@ class ABCDataset:
 			sampling_map[original_indices[:]] = final_indices
 
 			tree = cKDTree(xyz_middle_noise)
-			d, ii = tree.query(xyz_middle_noise, k=16, n_jobs=16)
+			d, ii = tree.query(xyz_middle_noise, k=16, workers=16)
 			locs_indices.append(torch.from_numpy(ii + voffset))
 
 			locs.append(torch.cat([torch.LongTensor(xyz.shape[0], 1).fill_(i), torch.from_numpy(xyz).long()], 1))

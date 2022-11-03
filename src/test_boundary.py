@@ -89,7 +89,7 @@ def Parse(iii, model, model_fn, start_epoch):
     sampling_map[original_indices[:]] = final_indices
 
     tree = cKDTree(xyz_middle)
-    d, ii = tree.query(xyz_middle, k=16, n_jobs=16)
+    d, ii = tree.query(xyz_middle, k=16, workers=16)
     locs_indices.append(torch.from_numpy(ii))
 
     locs.append(torch.cat([torch.LongTensor(xyz.shape[0], 1).fill_(0), torch.from_numpy(xyz).long()], 1))
