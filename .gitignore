@@ -1,0 +1,12 @@
+
+*.pth
+*.log
+build
+results
+data
+checkpoint
+*.pyc
+*.egg-info
+*.so
+
+*.zip

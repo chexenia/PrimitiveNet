@@ -1,3 +1,0 @@
-[submodule "src/lib/spconv"]
-	path = src/lib/spconv
-	url = https://github.com/hjwdzh/spconv
